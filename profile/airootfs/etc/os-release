@@ -1,0 +1,5 @@
+NAME="MidhunOS"
+PRETTY_NAME="MidhunOS"
+ID=midhunos
+ID_LIKE=arch
+BUILD_ID=rolling

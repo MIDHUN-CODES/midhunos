@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+VERSION="0.1"
+OS_NAME="$(. /etc/os-release && echo "$PRETTY_NAME")"
+KERNEL="$(uname -r)"
+DESKTOP="${XDG_CURRENT_DESKTOP:-Unknown}"
+SHELL_NAME="$(basename "$SHELL")"
+ARCHITECTURE="$(uname -m)"
+HOSTNAME="$(hostname)"
+USER_NAME="$(whoami)"
+UPTIME="$(uptime -p)"
+
+clear
+
+cat <<EOF
+
+       __  __ _     _ _                 ___  ____
+      |  \/  (_) __| | |__  _   _ _ __ / _ \/ ___|
+      | |\/| | |/ _\` | '_ \| | | | '_ \| | | \___ \\
+      | |  | | | (_| | | | | |_| | | | | |_| |___) |
+      |_|  |_|_|\__,_|_| |_|\__,_|_| |_|\___/|____/
+
+                    M I D H U N O S
+
+  ┌─────────────────────────────────────────────────┐
+  │                                                 │
+  │  Version       $VERSION
+  │  OS            $OS_NAME
+  │  Base          Arch Linux
+  │  Kernel        $KERNEL
+  │  Desktop       $DESKTOP
+  │  Shell         $SHELL_NAME
+  │  Architecture  $ARCHITECTURE
+  │  Hostname      $HOSTNAME
+  │  User          $USER_NAME
+  │  Uptime        $UPTIME
+  │                                                 │
+  └─────────────────────────────────────────────────┘
+
+                 Built with Arch.
+                 Built by Midhun.
+
+EOF

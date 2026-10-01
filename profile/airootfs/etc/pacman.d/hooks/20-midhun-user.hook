@@ -1,0 +1,13 @@
+# remove from airootfs!
+
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = base
+
+[Action]
+Description = Creating MidhunOS user...
+When = PostTransaction
+Depends = shadow
+Exec = /usr/bin/useradd -u 1000 -G wheel -p '' -s /bin/bash -m midhun
